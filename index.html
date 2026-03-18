@@ -11,13 +11,13 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   :root {
-    --bg: #f5f0e8;
+    --bg: #e8e0d4;
     --card: #fffdf8;
     --card-bg: #fffdf8;
     --border: #d4cfc4;
-    --text: #0d3b3b;
-    --muted: #5a7a7a;
-    --accent: #0d3b3b;
+    --text: #1a5252;
+    --muted: #6a9090;
+    --accent: #1a5252;
     --green: #1a6b5a;
     --red: #b5342a;
     --amber: #b8860b;
@@ -44,7 +44,7 @@
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
-    color: #0d3b3b;
+    color: var(--text);
   }
   .hero p {
     font-size: 19px;
@@ -215,7 +215,7 @@
     font-size: 11px;
     font-weight: 600;
   }
-  .pill.lease { background: rgba(13,59,59,0.1); color: var(--accent); }
+  .pill.lease { background: rgba(26,82,82,0.1); color: var(--accent); }
   .pill.overlap { background: rgba(184,134,11,0.12); color: var(--amber); }
   .pill.owned { background: rgba(26,107,90,0.12); color: var(--green); }
   
@@ -398,7 +398,7 @@ const fmt = (n) => '$' + (Math.abs(n) >= 1e6 ? (n/1e6).toFixed(1)+'M' : Math.abs
 const fmtFull = (n) => (n < 0 ? '-' : '') + '$' + Math.abs(Math.round(n)).toLocaleString();
 const years = data.map(d => d.year);
 
-Chart.defaults.color = '#5a7a7a';
+Chart.defaults.color = '#6a9090';
 Chart.defaults.borderColor = '#d4cfc4';
 Chart.defaults.font.family = 'Inter, sans-serif';
 
@@ -411,8 +411,8 @@ new Chart(document.getElementById('mainChart'), {
       {
         label: 'Revenue',
         data: data.map(d => d.revenue),
-        borderColor: '#0d3b3b',
-        backgroundColor: 'rgba(13,59,59,0.08)',
+        borderColor: '#1a5252',
+        backgroundColor: 'rgba(26,82,82,0.08)',
         fill: true, tension: 0.3, borderWidth: 2.5, pointRadius: 0,
       },
       {
@@ -480,8 +480,8 @@ data.forEach(d => {
   </p>
 
   <!-- The core message -->
-  <div style="background: linear-gradient(135deg, rgba(184,134,11,0.1), rgba(184,134,11,0.04)); border: 1px solid rgba(184,134,11,0.35); border-radius: 16px; padding: 40px; max-width: 700px; margin: 0 auto 48px; text-align: center;">
-    <div style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--amber); margin-bottom: 16px; font-weight: 600;">The Recommendation</div>
+  <div style="background: linear-gradient(135deg, rgba(0,210,190,0.12), rgba(0,210,190,0.05)); border: 1px solid rgba(0,210,190,0.4); border-radius: 16px; padding: 40px; max-width: 700px; margin: 0 auto 48px; text-align: center;">
+    <div style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #00d2be; margin-bottom: 16px; font-weight: 600;">The Recommendation</div>
     <div style="font-size: 36px; font-weight: 800; color: var(--text); margin-bottom: 8px;">Hold at least 20 BTC</div>
     <div style="font-size: 18px; color: var(--muted); line-height: 1.6;">Even in the <em>worst case</em>, 20 Bitcoin covers your $2M and then some.</div>
   </div>
