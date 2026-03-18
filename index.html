@@ -11,13 +11,13 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   :root {
-    --bg: #e8e0d4;
+    --bg: #ede6da;
     --card: #fffdf8;
     --card-bg: #fffdf8;
     --border: #d4cfc4;
-    --text: #1a5252;
-    --muted: #6a9090;
-    --accent: #1a5252;
+    --text: #0f3838;
+    --muted: #527070;
+    --accent: #0f3838;
     --green: #1a6b5a;
     --red: #b5342a;
     --amber: #b8860b;
@@ -215,7 +215,7 @@
     font-size: 11px;
     font-weight: 600;
   }
-  .pill.lease { background: rgba(26,82,82,0.1); color: var(--accent); }
+  .pill.lease { background: rgba(15,56,56,0.1); color: var(--accent); }
   .pill.overlap { background: rgba(184,134,11,0.12); color: var(--amber); }
   .pill.owned { background: rgba(26,107,90,0.12); color: var(--green); }
   
@@ -398,7 +398,7 @@ const fmt = (n) => '$' + (Math.abs(n) >= 1e6 ? (n/1e6).toFixed(1)+'M' : Math.abs
 const fmtFull = (n) => (n < 0 ? '-' : '') + '$' + Math.abs(Math.round(n)).toLocaleString();
 const years = data.map(d => d.year);
 
-Chart.defaults.color = '#6a9090';
+Chart.defaults.color = '#527070';
 Chart.defaults.borderColor = '#d4cfc4';
 Chart.defaults.font.family = 'Inter, sans-serif';
 
@@ -411,8 +411,8 @@ new Chart(document.getElementById('mainChart'), {
       {
         label: 'Revenue',
         data: data.map(d => d.revenue),
-        borderColor: '#1a5252',
-        backgroundColor: 'rgba(26,82,82,0.08)',
+        borderColor: '#0f3838',
+        backgroundColor: 'rgba(15,56,56,0.08)',
         fill: true, tension: 0.3, borderWidth: 2.5, pointRadius: 0,
       },
       {
