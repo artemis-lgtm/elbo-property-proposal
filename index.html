@@ -290,7 +290,7 @@
   <section>
     <div class="section-label">The Numbers</div>
     <div class="section-title">Revenue vs. Expenses (2025 - 2046)</div>
-    <div class="section-subtitle">Conservative projections: 4.5% annual revenue growth, 2.5% expense growth. Based on 2022-2025 actual financials.</div>
+    <div class="section-subtitle">Conservative projections: 4% annual revenue growth, 2.5% expense growth. Based on 2022-2025 actual financials.</div>
 
     <div class="card">
       <div class="chart-container">
@@ -308,7 +308,7 @@
       <div class="timeline-item">
         <div class="timeline-year">Now - 2030</div>
         <div class="timeline-text">Continue operating, build cash reserves for the down payment.</div>
-        <div class="timeline-detail">Revenue grows from $6.2M to $7.7M. Accumulate $6M for closing.</div>
+        <div class="timeline-detail">Revenue grows from $6.2M to $7.5M. Accumulate $6M for closing.</div>
       </div>
       <div class="timeline-item warn">
         <div class="timeline-year">2031 - Purchase</div>
@@ -322,7 +322,7 @@
       </div>
       <div class="timeline-item success">
         <div class="timeline-year">2036 - Lease Expires</div>
-        <div class="timeline-text">Sublease drops off. Net income jumps above $1M.</div>
+        <div class="timeline-text">Sublease drops off. Net income jumps to $800K+.</div>
         <div class="timeline-detail">No more lease payments. Only mortgage + property taxes remain. The payoff begins.</div>
       </div>
       <div class="timeline-item success">
@@ -386,13 +386,13 @@
 
   <footer>
     <p>Prepared March 2026. Projections based on 2022-2025 actual financial data from QuickBooks.</p>
-    <p style="margin-top: 8px;">Revenue growth: 4.5%/year. Expense growth: 2.5%/year. COGS: 32% of revenue.</p>
+    <p style="margin-top: 8px;">Revenue growth: 4%/year. Expense growth: 2.5%/year. COGS: 32% of revenue.</p>
   </footer>
 
 </div>
 
 <script>
-const data = [{"year":2025,"revenue":6169937,"totalCosts":5635834,"net":609241,"status":"LEASE"},{"year":2026,"revenue":6447584,"totalCosts":5860041,"net":587543,"status":"LEASE"},{"year":2027,"revenue":6737725,"totalCosts":6047807,"net":689919,"status":"LEASE"},{"year":2028,"revenue":7040923,"totalCosts":6242123,"net":798800,"status":"LEASE"},{"year":2029,"revenue":7357765,"totalCosts":6443239,"net":914526,"status":"LEASE"},{"year":2030,"revenue":7688864,"totalCosts":6651409,"net":1037455,"status":"LEASE"},{"year":2031,"revenue":8034863,"totalCosts":8196298,"net":-161435,"status":"OVERLAP"},{"year":2032,"revenue":8396432,"totalCosts":8425513,"net":-29081,"status":"OVERLAP"},{"year":2033,"revenue":8774271,"totalCosts":8662743,"net":111528,"status":"OVERLAP"},{"year":2034,"revenue":9169113,"totalCosts":8908290,"net":260823,"status":"OVERLAP"},{"year":2035,"revenue":9581723,"totalCosts":9162471,"net":419252,"status":"OVERLAP"},{"year":2036,"revenue":10012901,"totalCosts":8956628,"net":1056273,"status":"OWNED"},{"year":2037,"revenue":10463482,"totalCosts":9217352,"net":1246130,"status":"OWNED"},{"year":2038,"revenue":10934338,"totalCosts":9487444,"net":1446894,"status":"OWNED"},{"year":2039,"revenue":11426383,"totalCosts":9767268,"net":1659116,"status":"OWNED"},{"year":2040,"revenue":11940571,"totalCosts":10057201,"net":1883370,"status":"OWNED"},{"year":2041,"revenue":12477896,"totalCosts":10357637,"net":2120259,"status":"OWNED"},{"year":2042,"revenue":13039402,"totalCosts":10668987,"net":2370415,"status":"OWNED"},{"year":2043,"revenue":13626175,"totalCosts":10991676,"net":2634499,"status":"OWNED"},{"year":2044,"revenue":14239353,"totalCosts":11326151,"net":2913202,"status":"OWNED"},{"year":2045,"revenue":14880124,"totalCosts":11672872,"net":3207252,"status":"OWNED"},{"year":2046,"revenue":15549729,"totalCosts":12032323,"net":3517406,"status":"OWNED"}];
+const data = [{"year":2025,"revenue":6169937,"totalCosts":5635834,"net":609241,"status":"LEASE"},{"year":2026,"revenue":6416734,"totalCosts":5797220,"net":619514,"status":"LEASE"},{"year":2027,"revenue":6673404,"totalCosts":5963826,"net":709578,"status":"LEASE"},{"year":2028,"revenue":6940340,"totalCosts":6135829,"net":804511,"status":"LEASE"},{"year":2029,"revenue":7217954,"totalCosts":6313413,"net":904541,"status":"LEASE"},{"year":2030,"revenue":7506672,"totalCosts":6496770,"net":1009902,"status":"LEASE"},{"year":2031,"revenue":7806939,"totalCosts":8015492,"net":-208553,"status":"OVERLAP"},{"year":2032,"revenue":8119216,"totalCosts":8210993,"net":-91777,"status":"OVERLAP"},{"year":2033,"revenue":8443985,"totalCosts":8412880,"net":31105,"status":"OVERLAP"},{"year":2034,"revenue":8781744,"totalCosts":8621373,"net":160371,"status":"OVERLAP"},{"year":2035,"revenue":9133014,"totalCosts":8836700,"net":296314,"status":"OVERLAP"},{"year":2036,"revenue":9498335,"totalCosts":8694096,"net":804239,"status":"OWNED"},{"year":2037,"revenue":9878268,"totalCosts":8923806,"net":954462,"status":"OWNED"},{"year":2038,"revenue":10273399,"totalCosts":9161082,"net":1112317,"status":"OWNED"},{"year":2039,"revenue":10684335,"totalCosts":9406186,"net":1278149,"status":"OWNED"},{"year":2040,"revenue":11111708,"totalCosts":9659391,"net":1452317,"status":"OWNED"},{"year":2041,"revenue":11556176,"totalCosts":9920976,"net":1635200,"status":"OWNED"},{"year":2042,"revenue":12018423,"totalCosts":10191236,"net":1827187,"status":"OWNED"},{"year":2043,"revenue":12499160,"totalCosts":10470470,"net":2028690,"status":"OWNED"},{"year":2044,"revenue":12999127,"totalCosts":10758994,"net":2240133,"status":"OWNED"},{"year":2045,"revenue":13519092,"totalCosts":11057129,"net":2461963,"status":"OWNED"},{"year":2046,"revenue":14059855,"totalCosts":11365214,"net":2694641,"status":"OWNED"}];
 
 const fmt = (n) => '$' + (Math.abs(n) >= 1e6 ? (n/1e6).toFixed(1)+'M' : Math.abs(n) >= 1e3 ? (n/1e3).toFixed(0)+'K' : n);
 const fmtFull = (n) => (n < 0 ? '-' : '') + '$' + Math.abs(Math.round(n)).toLocaleString();
