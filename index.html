@@ -314,70 +314,7 @@
       </table>
     </div>
 
-    <div class="card">
-      <h3 style="margin-bottom: 24px; font-size: 18px;">Where the Money Goes (2031 - First Year of Ownership)</h3>
-      <div class="chart-container" style="height: 350px;">
-        <canvas id="expenseChart"></canvas>
-      </div>
-    </div>
 
-    <div class="card">
-      <h3 style="margin-bottom: 24px; font-size: 18px;">Cost Comparison: Leasing vs. Overlap vs. Owned</h3>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Period</th>
-            <th>Lease</th>
-            <th>Mortgage</th>
-            <th>Property Tax</th>
-            <th>COGS + OpEx</th>
-            <th>Total Costs</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2030 (Leasing)</td>
-            <td>$365,000</td>
-            <td>--</td>
-            <td>--</td>
-            <td>$6,286,409</td>
-            <td>$6,651,409</td>
-          </tr>
-          <tr class="overlap">
-            <td>2031 (Overlap)</td>
-            <td>$365,000</td>
-            <td>$1,023,396</td>
-            <td>$306,000</td>
-            <td>$6,501,902</td>
-            <td>$8,196,298</td>
-          </tr>
-          <tr class="overlap">
-            <td>2035 (Last Overlap)</td>
-            <td>$365,000</td>
-            <td>$1,023,396</td>
-            <td>$330,919</td>
-            <td>$7,443,156</td>
-            <td>$9,162,471</td>
-          </tr>
-          <tr class="owned">
-            <td>2036 (Owned)</td>
-            <td>--</td>
-            <td>$1,023,396</td>
-            <td>$337,537</td>
-            <td>$7,595,695</td>
-            <td>$8,956,628</td>
-          </tr>
-          <tr class="owned">
-            <td>2046 (Year 15)</td>
-            <td>--</td>
-            <td>$1,023,396</td>
-            <td>$411,629</td>
-            <td>$10,597,298</td>
-            <td>$12,032,323</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </section>
 
   <!-- INCOME vs EXPENSES -->
@@ -511,34 +448,6 @@ new Chart(document.getElementById('mainChart'), {
   }
 });
 
-// Expense breakdown donut (2031)
-new Chart(document.getElementById('expenseChart'), {
-  type: 'doughnut',
-  data: {
-    labels: ['COGS (Liquor/Food/Supplies)', 'Operating Expenses (Payroll/Utilities)', 'Mortgage Payment', 'Sublease', 'Property Taxes'],
-    datasets: [{
-      data: [2571156, 2930745, 1023396, 365000, 306000],
-      backgroundColor: ['#3b82f6', '#8b5cf6', '#f59e0b', '#ef4444', '#06b6d4'],
-      borderColor: '#12121a',
-      borderWidth: 3,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    cutout: '55%',
-    plugins: {
-      legend: {
-        position: 'right',
-        labels: { padding: 16, usePointStyle: true, font: { size: 12 } }
-      },
-      tooltip: {
-        callbacks: {
-          label: ctx => ctx.label + ': ' + fmtFull(ctx.raw) + ' (' + Math.round(ctx.raw / 8196298 * 100) + '%)'
-        }
-      }
-    }
-  }
-});
 
 // Populate table
 const tbody = document.getElementById('tableBody');
