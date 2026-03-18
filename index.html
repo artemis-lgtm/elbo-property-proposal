@@ -220,6 +220,22 @@
   .pill.overlap { background: rgba(245,158,11,0.15); color: var(--amber); }
   .pill.owned { background: rgba(34,197,94,0.15); color: var(--green); }
   
+  /* Cost list (clean mobile layout) */
+  .cost-list { display: flex; flex-direction: column; gap: 0; }
+  .cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cost-item:last-child { border-bottom: none; }
+  .cost-name { font-weight: 600; font-size: 15px; flex: 1; min-width: 0; }
+  .cost-numbers { text-align: right; flex-shrink: 0; }
+  .cost-annual { font-size: 16px; font-weight: 700; display: block; font-variant-numeric: tabular-nums; }
+  .cost-per { font-weight: 400; color: var(--muted); font-size: 13px; }
+  .cost-monthly { font-size: 13px; color: var(--muted); display: block; margin-top: 2px; }
+
   footer {
     padding: 40px 0;
     text-align: center;
@@ -270,48 +286,28 @@
 
     <div class="card">
       <h3 style="margin-bottom: 24px; font-size: 18px;">Annual Cost Breakdown</h3>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Monthly</th>
-            <th>Annual</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mortgage (P+I)</td>
-            <td>$85,283</td>
-            <td>$1,023,396</td>
-            <td style="text-align:left; color: var(--muted); font-weight: 400;">$11M at 7%, 20-year term</td>
-          </tr>
-          <tr>
-            <td>Property Taxes</td>
-            <td>$25,500</td>
-            <td>$306,000</td>
-            <td style="text-align:left; color: var(--muted); font-weight: 400;">1.8% of $17M, grows 2%/yr</td>
-          </tr>
-          <tr>
-            <td>Sublease (2031-2035)</td>
-            <td>$30,400</td>
-            <td>$365,000</td>
-            <td style="text-align:left; color: var(--muted); font-weight: 400;">Drops to $0 in 2036</td>
-          </tr>
-          <tr style="border-top: 2px solid var(--border);">
-            <td>COGS (~32% of rev)</td>
-            <td>varies</td>
-            <td>~$2.5M (2031)</td>
-            <td style="text-align:left; color: var(--muted); font-weight: 400;">Liquor, food, supplies</td>
-          </tr>
-          <tr>
-            <td>Operating Expenses</td>
-            <td>varies</td>
-            <td>~$3.0M (2031)</td>
-            <td style="text-align:left; color: var(--muted); font-weight: 400;">Payroll, utilities, insurance, maintenance</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="cost-list">
+        <div class="cost-item">
+          <div class="cost-name">Mortgage (P+I)</div>
+          <div class="cost-numbers"><span class="cost-annual">$1,023,396<span class="cost-per">/yr</span></span><span class="cost-monthly">$85,283/mo</span></div>
+        </div>
+        <div class="cost-item">
+          <div class="cost-name">Property Taxes</div>
+          <div class="cost-numbers"><span class="cost-annual">$306,000<span class="cost-per">/yr</span></span><span class="cost-monthly">$25,500/mo</span></div>
+        </div>
+        <div class="cost-item">
+          <div class="cost-name">Sublease <span style="color:var(--muted);font-weight:400;">(2031-2035, then $0)</span></div>
+          <div class="cost-numbers"><span class="cost-annual">$365,000<span class="cost-per">/yr</span></span><span class="cost-monthly">$30,400/mo</span></div>
+        </div>
+        <div class="cost-item" style="border-top: 2px solid var(--border); padding-top: 16px;">
+          <div class="cost-name">COGS <span style="color:var(--muted);font-weight:400;">~32% of revenue</span></div>
+          <div class="cost-numbers"><span class="cost-annual">~$2.5M<span class="cost-per">/yr</span></span><span class="cost-monthly">Liquor, food, supplies</span></div>
+        </div>
+        <div class="cost-item">
+          <div class="cost-name">Operating Expenses</div>
+          <div class="cost-numbers"><span class="cost-annual">~$3.0M<span class="cost-per">/yr</span></span><span class="cost-monthly">Payroll, utilities, insurance</span></div>
+        </div>
+      </div>
     </div>
 
 
