@@ -235,6 +235,24 @@
   .cost-per { font-weight: 400; color: var(--muted); font-size: 13px; }
   .cost-monthly { font-size: 13px; color: var(--muted); display: block; margin-top: 2px; }
 
+  /* Playbook items -- stacked layout for long descriptions */
+  .playbook-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .playbook-item:last-child { border-bottom: none; }
+  .playbook-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .playbook-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
   footer {
     padding: 40px 0;
     text-align: center;
@@ -259,7 +277,34 @@
     <p>Our sublease expires in 2036 with no option to renew. We either purchase the property or we lose the business. This is the plan to buy it.</p>
   </div>
 
-  <!-- EXPENSE DETAIL (top, right after hero) -->
+  <!-- PROPERTY OWNERSHIP (moved to top) -->
+  <section>
+    <div class="section-label">Property Intel</div>
+    <div class="section-title">Who Owns the Building</div>
+
+    <div class="card" style="margin-bottom: 32px;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="text-align:left">Detail</th>
+            <th style="text-align:left">Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Owner Entity</td><td style="text-align:left; font-weight:700; color:var(--text);">Brooklyn 46th LLC</td></tr>
+          <tr><td>Type</td><td style="text-align:left">Florida LLC (filed June 2018, Active)</td></tr>
+          <tr><td>Registered Agent</td><td style="text-align:left">Jeffrey O. Roberts</td></tr>
+          <tr><td>Principal Address</td><td style="text-align:left">3001-3015 E Las Olas Blvd, Fort Lauderdale</td></tr>
+          <tr><td>Parcel ID</td><td style="text-align:left">504212010250</td></tr>
+          <tr><td>Associated Names</td><td style="text-align:left">Yaari AJ, Avidor Lior</td></tr>
+          <tr><td>Related Entities at Address</td><td style="text-align:left">Club 219 LLC, 223 S Ft Lauderdale Beach Blvd LLC</td></tr>
+          <tr><td>Court Record</td><td style="text-align:left"><em>Beach Party Pizza v. Brooklyn 46th LLC</em> (4th DCA, 2025)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- EXPENSE DETAIL -->
   <section>
     <div class="section-label">Expense Breakdown</div>
     <div class="section-title">What We're Paying For</div>
@@ -547,95 +592,61 @@ data.forEach(d => {
   <div class="card" style="margin-bottom: 24px;">
     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--green);">Phase 1: Build the Arsenal</h3>
     <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Now through end of 2027</p>
-    <div class="cost-list">
-      <div class="cost-item"><div class="cost-name">Hire CRE Attorney</div><div class="cost-numbers"><span class="cost-monthly">Broward commercial real estate attorney. Quarterbacks the entire strategy.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Document Historical Significance</div><div class="cost-numbers"><span class="cost-monthly">Build the case: 1938 opening, film appearances, 88 years of media coverage. This is the designation backbone.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Line Up Preservation Non-Profit</div><div class="cost-numbers"><span class="cost-monthly">FL-registered non-profit with 5+ years history files the designation -- not us. Our hands stay clean.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Prepare HPB Application</div><div class="cost-numbers"><span class="cost-monthly">Complete the Historic Preservation Board application. Ready to file, but hold it. Loaded gun on the table.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Build Petition Infrastructure</div><div class="cost-numbers"><span class="cost-monthly">"Save the Elbo Room" -- page, copy, social assets, media contacts. Ready to launch during spring break season.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Deep Research on Brooklyn 46th LLC</div><div class="cost-numbers"><span class="cost-monthly">What else they own, debt, the Beach Party Pizza case, developer connections. Know their position.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Trademark "Elbo Room"</div><div class="cost-numbers"><span class="cost-monthly">Federal trademark. If we lose the building, the brand leaves with us. Signals the property without the name is worth less.</span></div></div>
-    </div>
+    <div class="playbook-item"><div class="playbook-title">Hire CRE Attorney</div><div class="playbook-desc">Broward commercial real estate attorney. Quarterbacks the entire strategy.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Document Historical Significance</div><div class="playbook-desc">Build the case: 1938 opening, film appearances, 88 years of media coverage. This is the designation backbone.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Line Up Preservation Non-Profit</div><div class="playbook-desc">FL-registered non-profit with 5+ years history files the designation -- not us. Our hands stay clean.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Prepare HPB Application</div><div class="playbook-desc">Complete the Historic Preservation Board application. Ready to file, but hold it. Loaded gun on the table.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Build Petition Infrastructure</div><div class="playbook-desc">"Save the Elbo Room" -- page, copy, social assets, media contacts. Ready to launch during spring break season.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Deep Research on Brooklyn 46th LLC</div><div class="playbook-desc">What else they own, debt, the Beach Party Pizza case, developer connections. Know their position.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Trademark "Elbo Room"</div><div class="playbook-desc">Federal trademark. If we lose the building, the brand leaves with us. Signals the property without the name is worth less.</div></div>
   </div>
 
   <!-- Phase 2 -->
   <div class="card" style="margin-bottom: 24px;">
     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--accent);">Phase 2: First Contact</h3>
     <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Early 2028</p>
-    <div class="cost-list">
-      <div class="cost-item"><div class="cost-name">Approach Through Broker</div><div class="cost-numbers"><span class="cost-monthly">CRE broker reaches out to Jeffrey Roberts. Casual: "long-term tenant, loves the property, exploring a purchase." No number yet.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Read Their Temperature</div><div class="cost-numbers"><span class="cost-monthly">"Not interested" = deploy leverage. "Maybe" = negotiate. They float a number = now you know the gap.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Probe Package Deal</div><div class="cost-numbers"><span class="cost-monthly">They own Club 219 LLC + 223 S Ft Lauderdale Beach Blvd LLC at same address. Multi-parcel deal may be more attractive.</span></div></div>
-    </div>
+    <div class="playbook-item"><div class="playbook-title">Approach Through Broker</div><div class="playbook-desc">CRE broker reaches out to Jeffrey Roberts. Casual: "long-term tenant, loves the property, exploring a purchase." No number yet.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Read Their Temperature</div><div class="playbook-desc">"Not interested" = deploy leverage. "Maybe" = negotiate. They float a number = now you know the gap.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Probe Package Deal</div><div class="playbook-desc">They own Club 219 LLC + 223 S Ft Lauderdale Beach Blvd LLC at same address. Multi-parcel deal may be more attractive.</div></div>
   </div>
 
   <!-- Phase 3A -->
   <div class="card" style="margin-bottom: 24px;">
     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--amber);">Phase 3A: If They Say No</h3>
     <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">2028 - 2029</p>
-    <div class="cost-list">
-      <div class="cost-item"><div class="cost-name">Launch Petition</div><div class="cost-numbers"><span class="cost-monthly">Go live during spring break. Target 100K+ signatures. Local + national media. 88-year landmark story writes itself.</span></div></div>
-      <div class="cost-item"><div class="cost-name">City Commission</div><div class="cost-numbers"><span class="cost-monthly">Present petition. Get commissioners on record supporting preservation. Nobody wants to lose a landmark on their watch.</span></div></div>
-      <div class="cost-item"><div class="cost-name">File Historic Designation</div><div class="cost-numbers"><span class="cost-monthly">Non-profit files with HPB. Public hearing. If approved: demolition and major changes require Certificate of Appropriateness.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Re-approach After 6 Months</div><div class="cost-numbers"><span class="cost-monthly">Let them absorb the new reality. Developer fantasy gone, public movement attached to building. The offer looks much better now.</span></div></div>
-    </div>
+    <div class="playbook-item"><div class="playbook-title">Launch Petition</div><div class="playbook-desc">Go live during spring break. Target 100K+ signatures. Local + national media. 88-year landmark story writes itself.</div></div>
+    <div class="playbook-item"><div class="playbook-title">City Commission</div><div class="playbook-desc">Present petition. Get commissioners on record supporting preservation. Nobody wants to lose a landmark on their watch.</div></div>
+    <div class="playbook-item"><div class="playbook-title">File Historic Designation</div><div class="playbook-desc">Non-profit files with HPB. Public hearing. If approved: demolition and major changes require Certificate of Appropriateness.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Re-approach After 6 Months</div><div class="playbook-desc">Let them absorb the new reality. Developer fantasy gone, public movement attached to building. The offer looks much better now.</div></div>
   </div>
 
   <!-- Phase 3B -->
   <div class="card" style="margin-bottom: 24px;">
     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--green);">Phase 3B: If They're Open to Selling</h3>
     <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">2028 - 2030</p>
-    <div class="cost-list">
-      <div class="cost-item"><div class="cost-name">Negotiate Price</div><div class="cost-numbers"><span class="cost-monthly">Start below $17M. Use commercial comps, not condo land comps. CRE attorney drives.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Structure the Deal</div><div class="cost-numbers"><span class="cost-monthly">CPA allocates purchase price to reduce tax reassessment. Explore seller financing -- they may prefer installments for tax reasons.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Due Diligence</div><div class="cost-numbers"><span class="cost-monthly">Environmental assessment, title search, survey, zoning. The Beach Party Pizza lawsuit may have revealed property issues.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Close by 2031</div><div class="cost-numbers"><span class="cost-monthly">Aligns with financial model. Earlier = less sublease/mortgage overlap.</span></div></div>
-    </div>
+    <div class="playbook-item"><div class="playbook-title">Negotiate Price</div><div class="playbook-desc">Start below $17M. Use commercial comps, not condo land comps. CRE attorney drives.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Structure the Deal</div><div class="playbook-desc">CPA allocates purchase price to reduce tax reassessment. Explore seller financing -- they may prefer installments for tax reasons.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Due Diligence</div><div class="playbook-desc">Environmental assessment, title search, survey, zoning. The Beach Party Pizza lawsuit may have revealed property issues.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Close by 2031</div><div class="playbook-desc">Aligns with financial model. Earlier = less sublease/mortgage overlap.</div></div>
   </div>
 
   <!-- Phase 4 -->
   <div class="card">
     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--red);">Phase 4: Fallback</h3>
     <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Only if everything fails by 2034</p>
-    <div class="cost-list">
-      <div class="cost-item"><div class="cost-name">Relocate the Brand</div><div class="cost-numbers"><span class="cost-monthly">Scout new flagship location. Name, trademarks, Heritage License network all move. The building is iconic but the brand is the asset.</span></div></div>
-      <div class="cost-item"><div class="cost-name">Maximize Final Years</div><div class="cost-numbers"><span class="cost-monthly">2034-2036: squeeze every dollar and document everything. "The original Elbo Room, est. 1938" -- franchise gold.</span></div></div>
-    </div>
+    <div class="playbook-item"><div class="playbook-title">Relocate the Brand</div><div class="playbook-desc">Scout new flagship location. Name, trademarks, Heritage License network all move. The building is iconic but the brand is the asset.</div></div>
+    <div class="playbook-item"><div class="playbook-title">Maximize Final Years</div><div class="playbook-desc">2034-2036: squeeze every dollar and document everything. "The original Elbo Room, est. 1938" -- franchise gold.</div></div>
   </div>
 </section>
 
-<!-- PROPERTY OWNERSHIP & CASH FLOW -->
-<section style="margin-top: 80px; border-top: 2px solid var(--border); padding-top: 60px;">
-  <div class="section-label">Property Intel</div>
-  <div class="section-title">Who Owns the Building</div>
+<!-- Bottom line -->
+<div style="margin: 60px 0 40px; padding: 24px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; text-align: center;">
+  <p style="font-size: 15px; color: var(--muted); line-height: 1.8;">
+    <strong style="color: var(--text);">Bottom line:</strong> Buy from Brooklyn 46th LLC for $17M. Survive 5 tight years. Then the building prints $800K+ net/year forever -- growing to $2.7M+ by 2046.
+  </p>
+</div>
 
-  <div class="card" style="margin-bottom: 32px;">
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th style="text-align:left">Detail</th>
-          <th style="text-align:left">Info</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Owner Entity</td><td style="text-align:left; font-weight:700; color:var(--text);">Brooklyn 46th LLC</td></tr>
-        <tr><td>Type</td><td style="text-align:left">Florida LLC (filed June 2018, Active)</td></tr>
-        <tr><td>Registered Agent</td><td style="text-align:left">Jeffrey O. Roberts</td></tr>
-        <tr><td>Principal Address</td><td style="text-align:left">3001-3015 E Las Olas Blvd, Fort Lauderdale</td></tr>
-        <tr><td>Parcel ID</td><td style="text-align:left">504212010250</td></tr>
-        <tr><td>Associated Names</td><td style="text-align:left">Yaari AJ, Avidor Lior</td></tr>
-        <tr><td>Related Entities at Address</td><td style="text-align:left">Club 219 LLC, 223 S Ft Lauderdale Beach Blvd LLC</td></tr>
-        <tr><td>Court Record</td><td style="text-align:left"><em>Beach Party Pizza v. Brooklyn 46th LLC</em> (4th DCA, 2025)</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div style="margin-top:32px; padding:24px; background:var(--card); border:1px solid var(--border); border-radius:12px; text-align:center;">
-    <p style="font-size:15px; color:var(--muted); line-height:1.8;">
-      <strong style="color:var(--text);">Bottom line:</strong> Buy from Brooklyn 46th LLC for $17M. Survive 5 tight years. Then the building prints $800K+ net/year forever -- growing to $2.7M+ by 2046.
-    </p>
-  </div>
-</section>
+<!-- property intel moved to top -->
 
 </body>
 </html>
